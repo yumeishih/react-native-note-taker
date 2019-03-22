@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --verbose --watch",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
     "ios": "react-native run-ios",
     "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "android-emulator": "~/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28",
@@ -19,7 +21,9 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
+    "enzyme": "^3.9.0",
     "eslint-plugin-react-native": "^3.6.0",
+    "jest-enzyme": "^7.0.2",
     "react": "16.8.3",
     "react-native": "0.59.1"
   },
@@ -40,6 +44,11 @@
     "react-test-renderer": "16.8.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "cacheDirectory": "./cache",
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-native|react-clone-referenced-element|react-navigation)"
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   }
 }
