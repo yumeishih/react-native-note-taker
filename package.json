@@ -12,6 +12,11 @@
     "lint": "eslint app/",
     "lint-fix": "eslint --fix app/"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  },
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "eslint-plugin-react-native": "^3.6.0",
@@ -29,6 +34,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
     "jest": "24.5.0",
     "metro-react-native-babel-preset": "0.53.1",
     "react-test-renderer": "16.8.3"
