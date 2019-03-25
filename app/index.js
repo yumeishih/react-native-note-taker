@@ -6,15 +6,8 @@
  * @flow
  */
 
-import React from 'react';
-import { View } from 'react-native';
-import style from './style';
-import Home from './screens/home';
+import { createAppContainer } from 'react-navigation'
 
-const App = () => (
-  <View style={style.container}>
-    <Home />
-  </View>
-)
+import AppSwitchNavigator from './routes'
 
-export default App
+export default createAppContainer(AppSwitchNavigator)
