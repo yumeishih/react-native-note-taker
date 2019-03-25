@@ -7,7 +7,7 @@ module.exports = {
         "extensions": [".ios.js", ".android.js", ".js", ".json"],
         "alias": {
           "Components": "./app/components",
-          "Style": "./app/style",
+          "Style": "./app/assets//style",
         }
       }
     ]
