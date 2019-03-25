@@ -6,15 +6,17 @@
  * @flow
  */
 
-import React from 'react';
-import { View } from 'react-native';
-import style from './style';
-import Home from './screens/home';
+import React from 'react'
+import { Provider } from 'react-redux'
+import App from 'Containers/appContainer'
+import initStore from './store'
 
-const App = () => (
-  <View style={style.container}>
-    <Home />
-  </View>
+const store = initStore()
+
+const NoteTaker = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
 )
 
-export default App
+export default NoteTaker

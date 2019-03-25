@@ -3,6 +3,6 @@
  */
 
 import {AppRegistry} from 'react-native'
-import App from './app'
+import NoteTaker from './app'
 
-AppRegistry.registerComponent("reactNativeNotetaker", () => App);
+AppRegistry.registerComponent("reactNativeNotetaker", () => NoteTaker);
